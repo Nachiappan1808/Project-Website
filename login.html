@@ -1,0 +1,66 @@
+<html>
+<head>
+<style>
+body
+{
+ background-image:url("F:\lap.jpg");
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+h1{
+color:black;
+}
+</style>
+<script language="JavaScript">
+function fun()
+{
+ var x,t;
+ x=document.forms["myForm"]["name"].value;
+t=document.forms["myForm"]["password"].value;
+if(x== null)
+window.alert('invalid name');
+if(t==null)
+window.alert('invalid password');
+else
+{
+ document.getElementById("para").innerHTML=document.getElementById("c2").innerHTML;
+}
+}
+</script>
+</head>
+<body>
+
+
+<h1>Get logged in</h1></br></br>
+        <form name="myForm" method="post">
+Name: <input type="text" name="Name"></br></br>
+Password: <input type="password"  name="password"></br>
+    </br></br>
+<button type="button"><a href="submit.html">Login</a></button>
+</form>
+
+<a href = "create.html"><div class="tooltip"><span class="tooltiptext">Create an account</span>
+Not registered yet?</a></div>
+</body>
+</html>
